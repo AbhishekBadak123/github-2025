@@ -7,7 +7,7 @@ const git = simpleGit();
 const FILE_PATH = './data.json';
 
 // How many active days you want in 2025
-const ACTIVE_DAYS = 400;
+const ACTIVE_DAYS = 4;
 
 const randomTime = (date) => {
   return moment(date)
@@ -22,9 +22,8 @@ const run = async () => {
 
   let days = [];
 
-// range only Dec 6 → Dec 31, 2024
   let start = moment('2026-01-01');
-  let end   = moment('2025-01-01');
+  let end   = moment('2026-02-01');
 
   while (start.isSameOrBefore(end)) {
     days.push(start.clone());
